@@ -1,7 +1,17 @@
-import logo from './logo.svg';
-import './App.css';
+import logo from "./logo.svg";
+import "./App.css";
+import { useEffect } from "react";
 
 function App() {
+  useEffect(() => {
+    const func = async () => {
+      console.log("useEffect");
+      const results = await fetch("https://api.github.com/users/lcanady");
+      const data = await results.json();
+      console.log(data);
+    };
+    func();
+  }, []);
   return (
     <div className="App">
       <header className="App-header">
