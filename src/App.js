@@ -4,6 +4,7 @@ import { useEffect } from "react";
 
 function App() {
   useEffect(() => {
+    console.log("useEffect test!");
     const func = async () => {
       console.log("useEffect");
       const results = await fetch("https://api.github.com/users/lcanady");
